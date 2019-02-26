@@ -1,0 +1,150 @@
+/*Ejemplo UNO*/
+
+#imagenUno{
+    object-fit: cover;
+    width: 250px;
+    height: auto;
+}
+
+
+/*Ejemplo DOS*/
+
+#imagenDos{
+    object-fit: cover;
+    width: 250px;
+    height: auto;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+/*Ejemplo TRES filtros*/
+
+.greyscale{
+    filter: grayscale(1);
+      -webkit-filter: grayscale(1);    
+  }
+  .sepia{
+    filter: sepia(100%);
+      -webkit-filter: sepia(1);
+      -ms-filter: sepia(100%);    
+  }
+  .blur{
+    filter: blur(5px);
+     -webkit-filter: blur(5px);
+     
+  }
+  .saturate{
+      filter: saturate(2);
+        -webkit-filter: saturate(2);
+  }
+  .hue {
+      filter: hue-rotate(140deg);
+        -webkit-filter: hue-rotate(140deg);
+  }
+  .invert {
+      filter: invert(.8);
+        -webkit-filter: invert(.8);
+  } 
+  .darken {
+      filter: brightness(.5);
+        -webkit-filter: brightness(.5);
+  }
+  .contrast {
+      filter: contrast(2);
+        -webkit-filter: contrast(2);
+  }
+  
+  .all-the-things {
+      filter: contrast(1.4) saturate(1.8) sepia(.6);
+        -webkit-filter: contrast(1.4) saturate(1.8) sepia(.6);
+  }
+  button:hover{
+     filter: opacity(.7);
+        -webkit-filter: opacity(.7);
+    text-shadow: -1px -1px 0px #000;
+  }
+
+  img:hover{
+    filter: none;
+    -webkit-filter: none;
+  }
+  
+  img{
+    max-width: 150px;
+  }
+  main{
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .grid{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 2% 2%;
+    text-align: center;
+  }
+  .grid li{
+    box-sizing: border-box;
+    padding: 1rem;
+    min-width: 1%;
+    max-width: 420px;
+  }
+  .grid li img{
+    -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+     -o-transition: all .2s ease-in-out;
+     -webkit-backface-visibility: hidden; /* Chrome pixel fix */
+     -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  }
+  
+  @media (max-width: 667px) {
+    h1{
+      font-size: 1.4rem;
+    }
+    header p{
+      font-size: .8rem;
+      text-transform: none;
+    }
+  }
+  
+
+/*Ejemplo CUATRO*/
+
+  @keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  #animate-area {
+    width: 400px;
+    height: 200px;
+    background-image: url(imagen.jpg);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 5s linear infinite alternate;
+  }
+
+  /*EJEMPLO CINCO*/
+
+  .signupsubmit {
+        background-image: url(imagen.jpg);
+        background-size:contain; 
+        background-repeat: no-repeat;
+        transform: rotateY(40deg) rotateX(40deg);
+        -webkit-transform: rotateY(40deg) rotateX(40deg);
+        transition: 2s;
+        line-height: 32px;
+        top: 527px;
+        border: none;
+        width: 250px;
+        height: 400px;
+ }
+    .signupsubmit:hover {   
+        -webkit-transform: rotateY(0deg) rotateX(0deg);
+        transform: rotateY(0deg) rotateX(0deg);
+    }
